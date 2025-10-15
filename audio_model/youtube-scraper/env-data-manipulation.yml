@@ -1,0 +1,20 @@
+name: env-data-manipulation
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - ffmpeg
+  - pyarrow
+  - datasets
+  - transformers
+  - evaluate
+  - jiwer
+  - numpy
+  - scipy
+  - pandas
+  - librosa
+  - tqdm
+  - youtube-transcript-api
+  - yt-dlp

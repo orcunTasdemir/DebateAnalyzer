@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio_model"
+version = "0.1.0"
+description = "Complete pipeline for scraping political debate videos and fine-tuning Whisper models"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Orcun Tasdemir"}
+]
+
+dependencies = [
+    # YouTube scraping dependencies
+    "yt-dlp>=2023.0.0",
+    "youtube-transcript-api>=0.6.0",
+    "tqdm>=4.65.0",
+
+    # Whisper training dependencies
+    "transformers>=4.30.0",
+    "datasets>=2.14.0",
+    "torch>=2.0.0",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.0",
+    "evaluate>=0.4.0",
+    "jiwer>=3.0.0",
+    "accelerate>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+audio-model = "main:main"
+
+[tool.setuptools]
+packages = ["debate_finder", "debate_scraper", "whisper_train"]
+py-modules = ["main", "project_config"]
+
+[tool.setuptools.package-dir]
+debate_finder = "youtube-scraper/debate_finder"
+debate_scraper = "youtube-scraper/debate_scraper"
+whisper_train = "whisper-train/whisper_train"
+
+[tool.setuptools.package-data]
+debate_finder = ["data/**/*"]

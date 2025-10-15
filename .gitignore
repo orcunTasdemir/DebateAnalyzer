@@ -1,0 +1,158 @@
+# ========================================
+# Python
+# ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ========================================
+# Virtual Environments
+# ========================================
+venv/
+ENV/
+env/
+.venv
+
+# ========================================
+# Jupyter Notebook
+# ========================================
+.ipynb_checkpoints
+*.ipynb
+
+# ========================================
+# Data & Models (Large Files)
+# ========================================
+# Downloaded debate videos and audio
+Data/
+audio_model/Data/
+debate_analyzer/Data/
+
+# Trained models (can be very large)
+Model/
+audio_model/Model/
+debate_analyzer/Model/
+
+# Preprocessed datasets
+**/debate_dataset/
+**/debate_dataset_processed/
+**/whisper_ready/
+
+# Downloaded YouTube videos/audio
+*.mp4
+*.mp3
+*.wav
+*.webm
+*.m4a
+*.flac
+
+# ========================================
+# Machine Learning / PyTorch
+# ========================================
+# Checkpoints
+*.ckpt
+*.pth
+*.pt
+checkpoint-*/
+runs/
+lightning_logs/
+
+# TensorBoard logs
+events.out.tfevents.*
+tensorboard_logs/
+
+# HuggingFace cache
+.cache/
+*.lock
+*.bin
+
+# ========================================
+# IDE / Editors
+# ========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ========================================
+# Environment & Config
+# ========================================
+.env
+.env.local
+*.env
+secrets.json
+credentials.json
+
+# Conda
+*.conda
+environment.lock
+
+# ========================================
+# Logs & Temporary Files
+# ========================================
+*.log
+*.tmp
+tmp/
+temp/
+logs/
+
+# ========================================
+# Project Specific
+# ========================================
+# Found debates database
+**/found_debates.json
+
+# Scraped data
+**/scraper_data.json
+
+# API keys and tokens
+*hf_token*
+*.token
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# IMPORTANT: Force-track these important config files
+!**/default_queries.json
+!environment.yml
+!pyproject.toml
+!**/config.py
+
+# ========================================
+# OS Generated
+# ========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ========================================
+# Git
+# ========================================
+*.orig

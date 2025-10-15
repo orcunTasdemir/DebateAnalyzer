@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-scraper"
+version = "0.1.0"
+requires-python = ">=3.7"
+dependencies = [
+    # Add your dependencies here
+    # "requests",
+    # "beautifulsoup4",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["debate_finder*", "debate_scraper*"]
+
+# Includes all files under the data directory
+[tool.setuptools.package-data]
+"*" = ["data/**/*"]

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whisper-train"
+version = "0.1.0"
+requires-python = ">=3.8"
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
+    "datasets>=2.0.0",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.0",
+    "evaluate>=0.4.0",
+    "jiwer>=3.0.0",  # For WER metric
+    "tqdm>=4.65.0",
+    "numpy>=1.24.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["whisper_train*"]

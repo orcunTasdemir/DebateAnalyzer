@@ -1,0 +1,21 @@
+# Data directories
+Data
+Model
+.vscode
+__pycache__
+.oldstuff/
+conda_env_ymls/
+youtube-scraper/scripts
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Conda
+*.tar.bz2
+
+
+CONFIGURATION.md
